@@ -1,0 +1,175 @@
+// 引入初始化样式
+@import 'base.less';
+
+body {
+    background-color: #ccc;
+}
+
+
+//轮播图部分
+#slide {
+    .swiper-wrapper{
+        .swiper-slide {
+            >a {
+                display: block;
+                width: 100%;
+                >img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .swiper-pagination{
+        .swiper-pagination-bullet{
+            border: 1px solid #fff;
+            background-color: rgba(0,0,0,0.2);
+            opacity: 1;
+        }
+        .swiper-pagination-bullet-active{
+            
+            background-color: #fff;
+        }
+    }
+    
+}
+
+// 导航条区域
+#nav {
+    padding: 10px;
+    background-color: #fff;
+    >ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        >li {
+            width: 25%;
+            margin-bottom: 5px;
+            >a {
+                display: block;
+                text-align: center;
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+                p {
+                    margin-top: 5px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+// 主体部分
+#main {
+    padding: 10px;
+    background-color: #eee;
+}
+
+//秒杀部分
+#seckill {
+    border: 1px solid #ccc;
+    .seckill-title {
+        height: 30px;
+        line-height: 30px;
+        >img {
+            width: 20px;
+            height: 25px;
+            margin-left: 5px;
+            float: left;
+        }
+        .seckill-font {
+            font-size: 14px;
+            color: @main-color;
+            float: left;
+            margin-left: 10px;
+        }
+        .seckill-time {
+            float: left;
+            margin-left: 10px;
+            >span {
+                display: inline-block;
+                text-align: center;
+                width: 15px;
+                line-height: 15px;
+                background-color: #000;
+                color: #fff;
+                &:nth-child(3n) {
+                    background-color: #eee;
+                    color: #000;
+                }
+            }
+        }
+        .seckill-more {
+            float: right;
+            line-height: 30px;
+            font-size: 14px;
+            margin-right: 10px;
+            color: #666;
+        }
+    }
+}
+
+//秒杀内容
+.seckill-content {
+    padding: 5px 0;
+    >ul {
+        display: flex;
+        >li {
+            flex: 1;
+            >a {
+                display: block;
+                text-align: center;
+                >img {
+                    width: 110px;
+                }
+                p {
+                    font-size: 12px;
+                    &:first-of-type {
+                        color: @main-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 京东超市
+#market {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.market-title {
+    border-bottom: 1px solid #ccc;
+    h4 {
+        line-height: 30px;
+        font-weight: normal;
+        margin-left: 20px;
+        position: relative;
+        &::before {
+            content: '';
+            width: 4px;
+            height: 15px;
+            background-color: @main-color;
+            position: absolute;
+            top: 8px;
+            left: -7px;
+        }
+    }
+}
+
+.market-content {
+    display: flex;
+    >div {
+        flex: 1;
+        >a {
+            >img {
+                width: 100%;
+            }
+        }
+    }
+}
+
